@@ -1,0 +1,1 @@
+python create_fusion_app.py %*
