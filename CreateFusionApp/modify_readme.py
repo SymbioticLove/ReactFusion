@@ -64,14 +64,14 @@ Root/
 ```
 
 ## Available scripts in your Fusion app
-`npm start` Start the development server
-`npm run build` Build the production-ready app
-`npm run lint` Run ESLint to check your code for errors and style issues
-`npm run lint:fix` Run ESLint and automatically fix fixable issues
-`npm run format` Run Prettier to format your code
-`npm run lint-and-format` Run ESLint and Prettier together (you'll use this most!)
-`npm run watch-data`: Watch for changes in data files
-`npm run handle-data-change`: Rebuild the app and update data when data files change
+- `npm start` Start the development server
+- `npm run build` Build the production-ready app
+- `npm run lint` Run ESLint to check your code for errors and style issues
+- `npm run lint:fix` Run ESLint and automatically fix fixable issues
+- `npm run format` Run Prettier to format your code
+- `npm run lint-and-format` Run ESLint and Prettier together (you'll use this most!)
+- `npm run watch-data`: Watch for changes in data files
+- `npm run handle-data-change`: Rebuild the app and update data when data files change
 
 The final 2 commands will be used in the future for the larger framework and CMS system that will be built around it but serve no practical purpose currently
 
@@ -104,7 +104,7 @@ The larger ReactFusion framework (created mainly with Python) uses Flake8 and Bl
 1. Line Length: Lines should be 88 characters or less
 2. Import Sorting: Parentheses should be used for imports with multiple items
 
-`black --exclude /env .` ran in the root directory of the React Fusion project will format your Python code along these guidelines.
+- `black --exclude /env .` ran in the root directory of the React Fusion project will format your Python code along these guidelines.
 
 ## License
 
