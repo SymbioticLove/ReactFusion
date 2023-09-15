@@ -31,6 +31,7 @@ To note: If you do not have auto-formatting in your IDE tied to Prettier (such a
 ## Project structure
 The Fusion app structure is as follows:
 
+```
 Root/
 |-- node_modules/
 | |-- ...
@@ -60,6 +61,7 @@ Root/
 |-- .prettierrc
 |-- package.json
 |-- index.html
+```
 
 ## Available scripts in your Fusion app
 `npm start` Start the development server
