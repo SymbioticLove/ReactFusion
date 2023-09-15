@@ -18,13 +18,11 @@ Within the CreateFusionApp directory, you will find the modularized version of t
 
 1. Clone this repository
 2. Navigate to the CreateFusionApp directory
-3. Create a virtual enviroment with `python -m venv env`
-4. Activate the virtual environment with `env\Scripts\activate`
-5. Run the command `fusion` (you can also provide a directory argument for the project here: `fusion c:\` will save the project at the C drive. If no directory argument is provided, the project will be created one directory above the CreateFusionApp directory)
-6. Provide a unique project name in the format project-name-formatted
-7. Go grab a coffee
-8. Navigate to your new project directory
-9. Initialize the development server with `npm start`
+3. Run the command `fusion` (you can also provide a directory argument for the project here: `fusion c:\` will save the project at the C drive. If no directory argument is provided, the project will be created one directory above the CreateFusionApp directory)
+4. Provide a unique project name in the format project-name-formatted
+5. Go grab a coffee
+6. Navigate to your new project directory
+7. Initialize the development server with `npm start`
 
 To note: If you do not have auto-formatting in your IDE tied to Prettier (such as in VSCode), you can format your project by using the command `npm run lint-and-format` in your project's root directory.
 
@@ -95,7 +93,7 @@ As with a majority of the React ecosystem, React Fusion is also seeking to be dr
 
 ### Formatting note for contributors
 
-If you plan to contribute to building the larger framework, you will need to install black and flake8 through pip in your virtual environment.
+If you plan to contribute to building the larger framework, you will need to create a virtual environment and install black and flake8 through pip in your virtual environment.
 
 ## ReactFusion framework code formatting guidelines
 
