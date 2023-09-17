@@ -37,7 +37,7 @@ The Fusion App setup tool is a Python script that creates a Fusion project with:
 - A formatted App component wrapped with the Provider, Router, and with hash routing set up for efficient and seamless MPA development
 - Modified index.html, index.css, and manifest.json files to fit into the Fusion structure and define a :root for easy and consistent styling
 
-To create a Fusion project clone the repository, navigate to the CreateFusionApp directory, and run the command `fusion`. You will be prompted to provide a unique project name, then the build process will be executed. You may also provide a directory arugment when running the script to declare a filepath for the project. `fusion c:\` or `fusion c:` will save the project at your C:\ drive. If no directory argument is provided, the project will be saved one directory above the script, alongside the CreateFusionApp directory. Mac/Linux users will need to run the create_fusion_app.py script directly The following files are modified or created through the build process:
+To create a Fusion project clone the repository, navigate to the CreateFusionApp directory, and run the command `fusion`. You will be prompted to provide a unique project name, then the build process will be executed. You may also provide a directory arugment when running the script to declare a filepath for the project. `fusion c:\` or `fusion c:` will save the project at your C:\ drive. If no directory argument is provided, the project will be saved one directory above the script, alongside the CreateFusionApp directory. Mac/Linux users will need to run the create_fusion_app.py script directly. The following files are modified or created through the build process:
 
 ### Fusion App.js:
 ```javascript
