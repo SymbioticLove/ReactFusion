@@ -1,7 +1,7 @@
 import os
 import re
 import json
-from run_command import run_command
+from modules.run_command import run_command
 
 
 # Function to modify the index.html file

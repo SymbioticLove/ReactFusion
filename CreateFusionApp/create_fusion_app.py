@@ -1,4 +1,4 @@
-from create_project import create_project
+from modules.create_project import create_project
 
 if __name__ == "__main__":
     create_project()

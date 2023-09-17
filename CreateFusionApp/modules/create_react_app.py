@@ -1,4 +1,4 @@
-from run_command import run_command
+from modules.run_command import run_command
 import os
 import shutil
 
