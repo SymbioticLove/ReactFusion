@@ -317,17 +317,17 @@ The create_project.py module handles a the main workflow of the script. This scr
 ```python
 import sys
 import os
-from name_validation import is_snake_case_with_dashes
-from create_react_app import create_react_app
-from setup_redux import setup_redux
-from create_data_dir import create_data_dir
-from modify_manifest import modify_manifest_json
-from modify_index_css import modify_index_css
-from modify_index_html import modify_index_html
-from modify_react_project import modify_react_project
-from modify_readme import modify_readme
-from move_files import move_up_and_remove_redundant_dir
-from run_command import run_command
+from modules.name_validation import is_snake_case_with_dashes
+from modules.create_react_app import create_react_app
+from modules.setup_redux import setup_redux
+from modules.create_data_dir import create_data_dir
+from modules.modify_manifest import modify_manifest_json
+from modules.modify_index_css import modify_index_css
+from modules.modify_index_html import modify_index_html
+from modules.modify_react_project import modify_react_project
+from modules.modify_readme import modify_readme
+from modules.move_files import move_up_and_remove_redundant_dir
+from modules.run_command import run_command
 
 
 # Main function to create the project
@@ -442,7 +442,7 @@ def is_snake_case_with_dashes(name):
 The create_react_app.py module is resposible for initializing a standard Create React App with npm. It also removes the redundant directory created in the process
 
 ```python
-from run_command import run_command
+from modules.run_command import run_command
 import os
 import shutil
 
@@ -579,7 +579,7 @@ The modify_index_html.py module is responsible for modifying the index.html file
 import os
 import re
 import json
-from run_command import run_command
+from modules.run_command import run_command
 
 
 # Function to modify the index.html file
