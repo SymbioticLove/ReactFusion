@@ -1,10 +1,31 @@
 # React Fusion Framework Documentation
 
-This is a comprehensive documentation for using the Fusion React framework
+This is a comprehensive documentation for using the Fusion React framework. Here you will find everything you need to know to help build the React Fusion framework and build with it.
+
+## Update 0.0.2 - Setup Tool and Our First Component
+
+I have modularized, organized, and released the Create Fusion App script to GitHub, and will soon release this to pip as well. In addition, I have begun some basic work on the component library. The FixedFusionHeader is a fixed header component with 3 basic styling templates to begin with. Once the library is ready for a production release, the library will be released to npm and each component will be installable as needed
 
 ## What is the Fusion Framework?
 
 The Fusion framework is a comprehensive React framework being designed to simplify the experience of web development. Fusion apps are, at their core, React/Redux apps. They are formatted in a specific way and use existing libraries in combination with proprietary modules and components to, in the near future, enable React developers to create high-fidelity and fully functional web applications that can be hosted in the static environment provided by GitHub Pages securely, without server components, and without sacrificing any of the functionality you would expect from a back-end system. In addition, through GitHub Actions automations and the Git CLI, this system has the potential to act as a simple and dynamic individualized CMS with much higher performance and control than existing PHP CMS. To simplify the CMS functionality planned for the Fusion framework, a simplified no-code UI will also be built around the system leveraging all of these technologies to deliver a seamless and highly-accessible web development experience. Due to the planned structure of the Fusion framework, it will be accessible and usable by all levels of React developers through the set-up tools, which create well formatted React/Redux apps with formatting/linting files and scripts, the component library which will be usable in any React/Redux project, and the no-code UI which will be usable by any and all. Combining the appropriate project structure and the component library creates the Fusion framework architecture and creates the most seamless user experience
+
+## Contributors
+
+If you would like to contribute to the Fusion project, we welcome you! Take your time to read through the documentation carefully and note the structure of Fusion components and the way they fit into the larger architecture, and how they relate to standard React components and projects. You will notice a few common structural tendencies such as:
+
+- Components use mapping over the Redux data to generate page content and remain as concise as possible
+- Component data is always scoped with the useSelector hook per individual component
+- If data must be passed between components, that data is stored in a useEffect or useContext hook and passed as a prop
+- Import statements and comments should be similar for each component
+- All Python code should use Flake8 and Black for formatting and styling, and all components should use the ESLint and Prettier setup provided by creating a Fusion application. The details of this formatting are found later in this documentation. Because the formatting guidelines and scripts are automatically created when creating a Fusion project, this is the ideal sandbox to create and test Fusion components and integrations
+- Classes are kept as minimal as possible (often only the wrapper div will receive a class)
+- Because of the above, CSS template styling relies heavily on the C
+- Components should be fully [WCAG compliant](https://www.w3.org/WAI/standards-guidelines/wcag/)
+
+### We welcome contributions from any level of experience! There is a project for you
+
+We are looking for a wide range of developers of all skill levels! Whether you are just starting your journey or are a seasoned veteran looking to contribute to the growth of the industry, there's certainly a project for you! If you are an early developer or designer honing your CSS skills, creating CSS type templates will help you master the power of descending selectors and the cascade. Writing documentation can help you get a much deeper understanding of syntaxes and practical examples of powerful concepts like mapping and Redux. For more mid-level developers we are seeking contributions to our proprietary AI model that will be trained extensively on the Fusion system, WCAG reviews, component design, and project board management (Agile masters!). For veterans, we are looking for assistance deriving the specifics of the CMS architecture and UI/UX for the no-code platform we intend to build on top of the Fusion framework, in addition to assistance in deciding the technology stack of that platform. We will also need websockets experts, engineers intimately familiar with GitHub collaboration (this is my first major collaborative project and I have not worked at an enterprise scale; I need the help!), testing and debugging experts, automations experts, devops engineers; the list rolls on. If you're reading this, you certainly have something that can contribute to the Fusion project. Refer to the Board or Issues sections to get an idea of what we are currently working on, and feel free to submit a pull request if you'd like to do something we haven't thought of!
 
 ### Using Fusion Components in Other Projects
 
