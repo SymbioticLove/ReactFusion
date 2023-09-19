@@ -43,7 +43,7 @@ If you would like to contribute to the Fusion project, we welcome you! Take your
   |--package.json
 ```
 
-The install.py and package.json scripts are the for all components (unless you went off the script somewhere). Simply copy these into the root directory of your newly created component
+The install.py and package.json scripts are the same for all components (unless you went off the script somewhere). Simply copy these into the root directory of your newly created component
 
 #### install.py
 
