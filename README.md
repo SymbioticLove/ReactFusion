@@ -2,9 +2,9 @@
 
 This is a comprehensive documentation for using the Fusion React framework. Here you will find everything you need to know to help build the React Fusion framework and build with it.
 
-## Update 0.0.2 - Setup Tool and Our First Component
+## Update 0.0.3 - npm Install Script + package.json + 1 more component
 
-I have modularized, organized, and released the Create Fusion App script to GitHub, and will soon release this to pip as well. In addition, I have begun some basic work on the component library. The FixedFusionHeader is a fixed header component with 3 basic styling templates to begin with. Once the library is ready for a production release, the library will be released to npm and each component will be installable as needed
+I have created an installation script and package.json for the components when they are installed through npm. Ideally, this will make it where you can install individual components on an as-needed basis. When a component is added to the project, the desired behavior is for the types and nested-components directories, as well as the component .js file, to be added to your project's component directory (I need to modify the create project script to also create a components directory - first issue if anyone wants to tackle it!) and for the data object to be appended to your data.json file. Then it's just a matter of plug and play! The current header components do not yet contain a nav menu, but that is the next priority. There are now 2 headers, a fixed header and a sleek header. The current install and package scripts are untested, but I know they are close at least. If anyone spots any errors, feel free to submit a pull request.
 
 ## What is the Fusion Framework?
 
@@ -14,6 +14,7 @@ The Fusion framework is a comprehensive React framework being designed to simpli
 
 If you would like to contribute to the Fusion project, we welcome you! Take your time to read through the documentation carefully and note the structure of Fusion components and the way they fit into the larger architecture, and how they relate to standard React components and projects. You will notice a few common structural tendencies such as:
 
+- Components start with Fusion, and are concise and descriptive. EX: "FusionFixedHeader" or "FusionSleekHeader"
 - Components use mapping over the Redux data to generate page content and remain as concise as possible
 - Component data is always scoped with the useSelector hook per individual component
 - If data must be passed between components, that data is stored in a useEffect or useContext hook and passed as a prop
@@ -22,6 +23,100 @@ If you would like to contribute to the Fusion project, we welcome you! Take your
 - Classes are kept as minimal as possible (often only the wrapper div will receive a class)
 - Because of the above, CSS template styling relies heavily on the C
 - Components should be fully [WCAG compliant](https://www.w3.org/WAI/standards-guidelines/wcag/)
+
+### All components for the component are individually installable through npm and must be structured specifically. To wit:
+
+```
+--FusionComponent/
+  |--data/
+  |  |--dataObject.json
+  |
+  |--nested-components (if applicable)
+  |  |--... (Same structure as parent component, can contain multiple nested-component layers)
+  |
+  |--types/
+  |  |--CSS templates
+  |
+  |--FusionComponent.js
+  |--README.md
+  |--install.py
+  |--package.json
+```
+
+The install.py and package.json scripts are the for all components (unless you went off the script somewhere). Simply copy these into the root directory of your newly created component
+
+#### install.py
+
+```python
+import os
+import shutil
+import json
+
+# Define the source directory (your component's directory)
+component_dir = os.path.dirname(__file__)
+
+# Define the target directory in the user's project
+target_dir = os.path.join(os.getcwd(), "components")
+
+# Define the component name (based on the .js file's name)
+component_name = os.path.splitext(os.path.basename(__file__))[0]
+
+# Create a directory with the component's name around itself
+component_target_dir = os.path.join(target_dir, component_name)
+
+# Copy files to the component directory
+shutil.copytree(component_dir, component_target_dir)
+
+# Append dataObject.json to data.json
+data_object_path = os.path.join(component_target_dir, "data", "dataObject.json")
+data_file_path = os.path.join(os.getcwd(), "data.json")
+
+with open(data_object_path, "r") as data_object_file:
+    data_object = json.load(data_object_file)
+
+if os.path.exists(data_file_path):
+    with open(data_file_path, "r") as data_file:
+        data = json.load(data_file)
+else:
+    data = {}
+
+data.update(data_object)
+
+with open(data_file_path, "w") as data_file:
+    json.dump(data, data_file, indent=2)
+```
+
+#### package.json
+
+```json
+{
+  "name": "your-component",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "python install-script.py"
+  },
+  "files": [
+    "component.js",
+    "types",
+    "nested-components",
+    "data/dataObject.json"
+  ]
+}
+```
+
+After you have created the component js file, at least one template CSS, saved the dataObject properly in the data.json (which will likely read as a syntax error; it should not be within an array):
+
+#### dataObject.json
+
+```json
+"fusionFixedHeader": {
+  "title": "React Fusion",
+  "subtitle": "Empowering React Developers",
+  "image": "https://placehold.co/150"
+}
+```
+
+and added the install.py and package.json scripts to the root directory, simply zip the files and place the zipped files in the root component directory as well, and flag it with "REVIEW". You just built a fusion component! Reward yourself somehow because you deserve it. You've contributed mightily to a project that could change the face of web development
 
 ### We welcome contributions from those of any level of experience. There is a project for you!
 
@@ -922,20 +1017,20 @@ export default App;
 
 ## Components
 
-Here you will find individuial domumentation for each component within the Fusion library, instructions to modify them for use in standard React projects, and a list of their types. Types are different base stylesheets and can be changed at the top of each component by changing the name after the latter dash:
+Here you will find individuial domumentation for each component within the Fusion library, instructions to modify them for use in standard React projects, and a list of their types. Types are different base stylesheets and can be changed at the top of each component by changing the name before the .module:
 
 #### With the 'basic' stylesheet
 
 ```javascript
 // Pick style template
-import styles from './FusionFixedHeader-types/FusionFixedHeader-basic.module.css';
+import styles from './types/basic.module.css';
 ```
 
 #### With the 'styled' stylesheet
 
 ```javascript
 // Pick style template
-import styles from './FusionFixedHeader-types/FusionFixedHeader-styled.module.css';
+import styles from './types/styled.module.css';
 ```
 
 ## FusionFixedHeader

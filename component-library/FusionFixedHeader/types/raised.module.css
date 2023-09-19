@@ -10,8 +10,8 @@
   place-items: center;
   padding: 0 0.5rem;
   text-align: center;
-  border-bottom: var(--sec) 4px solid;
-  user-select: none;
+  border-bottom: outset 3px #333;
+  box-shadow: 3px 3px 6px #000;
 }
 
 .scrolledHeader {
@@ -24,14 +24,7 @@
   border-radius: 50%;
   transition:
     width 0.3s ease,
-    height 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.headerContainer img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 10px #000;
+    height 0.3s ease;
 }
 
 .scrolledHeader img {
@@ -42,13 +35,11 @@
 .headerContainer h1,
 h2 {
   color: var(--sec);
-  animation: dropFromTop 0.5s ease forwards;
 }
 
 .headerContainer h1 {
   font-size: 3rem;
   font-family: var(--f1);
-  text-shadow: 3px 3px 3px #000;
   transition: font-size 0.3s ease;
 }
 
@@ -66,24 +57,13 @@ h2 {
   font-size: 1.25rem;
 }
 
-body {
-  height: 200vh;
-}
-
-@keyframes dropFromTop {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 @media only screen and (max-width: 767px) {
   .headerContainer {
     flex-direction: column-reverse;
+  }
+
+  .headerContainer img {
+    margin-bottom: 1rem;
   }
 
   .headerContainer h1 {

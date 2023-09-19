@@ -56,6 +56,10 @@ h2 {
     flex-direction: column-reverse;
   }
 
+  .headerContainer img {
+    margin-bottom: 1rem;
+  }
+
   .headerContainer h1 {
     font-size: 2.5rem;
   }
