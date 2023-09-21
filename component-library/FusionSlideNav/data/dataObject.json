@@ -1,0 +1,20 @@
+"fusionSlideNav": {
+  "routes": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Route1",
+      "url": "/Route1"
+    },
+    {
+      "name": "Route2",
+      "url": "/Route2"
+    },
+    {
+      "name": "Route3",
+      "url": "/Route3"
+    }
+  ]
+}
