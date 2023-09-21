@@ -2,9 +2,9 @@
 
 This is a comprehensive documentation for using the Fusion React framework. Here you will find everything you need to know to help build the React Fusion framework and build with it.
 
-## Update 0.0.3 - npm Install Script + package.json + 1 more component
+## Update 0.0.4 - FusionSlideNav component + embedded into FusionSleekHeader
 
-I have created an installation script and package.json for the components when they are installed through npm. Ideally, this will make it where you can install individual components on an as-needed basis. When a component is added to the project, the desired behavior is for the types and nested-components directories, as well as the component .js file, to be added to your project's component directory (I need to modify the create project script to also create a components directory - first issue if anyone wants to tackle it!) and for the data object to be appended to your data.json file. Then it's just a matter of plug and play! The current header components do not yet contain a nav menu, but that is the next priority. There are now 2 headers, a fixed header and a sleek header. The current install and package scripts are untested, but I know they are close at least. If anyone spots any errors, feel free to submit a pull request.
+The FusionSlideNav component has been completed to be used as both a standalone nav menu and to be embedded into the FusionSleekHeader. The FusionSlideNav accepts 2 props that control whether the menu is visible (boolean) and the opening/closing of the menu (function). If you are using the SlideNav as a standalone, you will need to pass these props from the parent component (typically the menu opening button). This is already taken care of in the FusionSleekHeader. Documentation updates pending, which will include the function as well as the props + prop validations.
 
 ## What is the Fusion Framework?
 

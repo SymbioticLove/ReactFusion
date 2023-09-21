@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+
+// import FusionSlideNav nested component
+import FusionSlideNav from '../FusionSlideNav/FusionSlideNav';
 
 // Pick style template
 import styles from './types/animated.module.css';
@@ -22,6 +25,12 @@ const FusionSleekHeader = () => {
   // Scope Redux data
   const shdata = useSelector(state => state.about.fusionSleekHeader);
 
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className={styles.headerContainer}>
       <div>
@@ -31,8 +40,11 @@ const FusionSleekHeader = () => {
           <h2>{shdata.subtitle}</h2>
         </div>
       </div>
-      {/* Replace with "/menu_black" in the data object for a dark menu icon */}
-      <img src={shdata.menuImage} alt="menu" />
+      <button onClick={toggleMenu}>
+        {/* Replace with "menu_black.png" in data object for a dark menu button */}
+        <img src={shdata.menuImage} alt="menu" className={styles.menuImage} />
+        <FusionSlideNav isOpen={isMenuOpen} onClose={toggleMenu} />
+      </button>
     </div>
   );
 };

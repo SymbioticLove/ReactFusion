@@ -1,0 +1,77 @@
+.slideNavContainer {
+  display: flex;
+  background: #333;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3rem;
+  border-radius: 0 0 0 20px;
+  z-index: 100;
+  animation: slideFromRight 0.7s ease;
+}
+
+.slideNavContainer h3 {
+  color: orange;
+  font-family: var(--f1);
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.slideNavContainer ul {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.slideNavContainer ul li {
+  padding: 0.5rem;
+}
+
+.slideNavContainer ul li a {
+  text-decoration: none;
+  color: var(--sec);
+  font-size: 1.5rem;
+  font-family: var(--f2);
+  letter-spacing: 0.1rem;
+}
+
+.slideNavContainer ul li a:hover {
+  text-decoration: underline;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .slideNavContainer {
+    left: 0;
+    border-radius: 0;
+    animation: slideFromTop 0.7s ease;
+  }
+
+  .slideNavContainer h3 {
+    font-size: 1.5rem;
+  }
+
+  .slideNavContainer ul li a {
+    font-size: 1.25rem;
+  }
+}
