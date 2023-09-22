@@ -24,7 +24,7 @@ If you would like to contribute to the Fusion project, we welcome you! Take your
 - Because of the above, CSS template styling relies heavily on the C
 - Components should be fully [WCAG compliant](https://www.w3.org/WAI/standards-guidelines/wcag/)
 
-### All components for the component are individually installable through npm and must be structured specifically. To wit:
+### All components for the component library are individually installable through npm and must be structured specifically. To wit:
 
 ```
 --FusionComponent/
