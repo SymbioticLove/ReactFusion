@@ -33,7 +33,7 @@ def modify_index_html(project_name):
 
     # Install dependencies using npm in the project directory
     run_command(
-        f"npm install --save @emailjs/browser @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @testing-library/jest-dom @testing-library/react @testing-library/user-event date-fns emailjs-com eslint gsap prettier prop-types react react-dom react-scripts react-transition-group redux react-redux web-vitals react-router-dom",
+        f"npm install --save @emailjs/browser @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @testing-library/jest-dom @testing-library/react @testing-library/user-event date-fns emailjs-com eslint gsap prettier prop-types react react-dom react-scripts react-transition-group redux react-redux web-vitals react-router-dom @reduxjs/toolkit",
         cwd=os.path.join(os.getcwd(), project_name),
     )
 

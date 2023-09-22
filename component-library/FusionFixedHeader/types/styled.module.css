@@ -105,6 +105,7 @@ h2 {
 
   .headerContainer h1 {
     font-size: 2.5rem;
+    margin-top: 0;
   }
 
   .scrolledHeader h1 {

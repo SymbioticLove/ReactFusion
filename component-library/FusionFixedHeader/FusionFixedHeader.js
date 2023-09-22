@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
+// Import FusionSimpleNav
+import FusionSimpleNav from '../FusionSimpleNav/FusionSimpleNav';
+
 // Pick style template
 import styles from './types/styled.module.css';
 // Change this to the appropriate type ^ All fixed headers have an image, title (h1), subtitle (h2), and nav menu (nested)
@@ -56,6 +59,7 @@ const FusionFixedHeader = () => {
         <h1>{fhdata.title}</h1>
         <h2>{fhdata.subtitle}</h2>
       </div>
+      <FusionSimpleNav />
     </div>
   );
 };

@@ -1,0 +1,13 @@
+{
+  "name": "your-component",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "python install-script.py"
+  },
+  "files": [
+    "component.js",
+    "types",
+    "nested-components",
+    "data/dataObject.json"
+  ]
+}

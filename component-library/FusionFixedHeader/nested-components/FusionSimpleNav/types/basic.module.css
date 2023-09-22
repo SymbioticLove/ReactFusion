@@ -1,0 +1,35 @@
+.simpleNavContainer ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.scrolledNav ul {
+    display: flex;
+}
+
+.simpleNavContainer li {
+  padding: 0.5rem;
+}
+
+.simpleNavContainer a {
+  text-decoration: none;
+  color: var(--sec);
+  font-family: var(--f1);
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+  .simpleNavContainer ul {
+    display: flex;
+  }
+
+  .scrolledNav a {
+    font-size: 1rem;
+  }
+}

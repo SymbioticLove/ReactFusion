@@ -20,7 +20,7 @@ def create_project():
         project_path = sys.argv[1]
     else:
         # If no path is provided, create the project one directory above itself
-        project_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
+        project_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 
     # Ensure the project path ends with a trailing slash
     project_path = os.path.join(project_path, "")
