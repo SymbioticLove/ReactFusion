@@ -41,7 +41,7 @@ const FusionSleekHeader = () => {
         </div>
       </div>
       <button onClick={toggleMenu}>
-        {/* Replace with "menu_black.png" in data object for a dark menu button */}
+        {/* Replace with "menu_black.svg" in data object for a dark menu button */}
         <img src={shdata.menuImage} alt="menu" className={styles.menuImage} />
         <FusionSlideNav isOpen={isMenuOpen} onClose={toggleMenu} />
       </button>

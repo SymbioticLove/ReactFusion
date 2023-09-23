@@ -131,9 +131,9 @@ function App() {
         <Router>
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-            {/* <Route path="/route1" />
-              <Route path="/route2" />
-              <Route path="/route3" /> */}
+            <Route path="/route1" />
+            <Route path="/route2" />
+            <Route path="/route3" />
           </Routes>
         </Router>
       </Provider>

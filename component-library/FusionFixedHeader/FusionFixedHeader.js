@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // Import FusionSimpleNav
-import FusionSimpleNav from '../FusionSimpleNav/FusionSimpleNav';
+import FusionSimpleNav from '/nested-components/FusionSimpleNav/FusionSimpleNav';
 
 // Pick style template
 import styles from './types/styled.module.css';
