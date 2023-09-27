@@ -12,15 +12,19 @@ from modules.modify_readme import modify_readme
 from modules.move_files import move_up_and_remove_redundant_dir
 from modules.run_command import run_command
 
-
 # Main function to create the project
 def create_project():
-    # Check if the user provided a project path as a command-line argument
-    if len(sys.argv) > 1:
-        project_path = sys.argv[1]
-    else:
-        # If no path is provided, create the project one directory above itself
-        project_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+    while True:
+        # Check if a directory argument is provided
+        if len(sys.argv) < 2:
+            project_path = input("Enter the project directory path: ")
+        else:
+            project_path = sys.argv[1]
+
+        if os.path.exists(project_path):
+            break
+        else:
+            print("Directory does not exist. Please provide a valid directory path.")
 
     # Ensure the project path ends with a trailing slash
     project_path = os.path.join(project_path, "")
@@ -79,7 +83,6 @@ def create_project():
 
     # Ensure proper Fusion formatting
     run_command("npm run lint-and-format", cwd=project_dir)
-
 
 if __name__ == "__main__":
     create_project()

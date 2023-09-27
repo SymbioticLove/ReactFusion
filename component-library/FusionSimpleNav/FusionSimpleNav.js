@@ -50,7 +50,7 @@ const FusionSimpleNav = () => {
       <ul>
         {sNavData.routes.map((route, index) => (
           <li key={index}>
-            <NavLink to={route.url} activeClassName="active">
+            <NavLink to={route.url} activeClassName={styles.active}>
               {route.name}
             </NavLink>
           </li>

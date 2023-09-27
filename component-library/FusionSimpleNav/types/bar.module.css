@@ -50,6 +50,10 @@
   transform: scaleX(1);
 }
 
+.simpleNavContainer a.active {
+  text-decoration: underline;
+}
+
 @keyframes gradientAnimation {
   0%,
   100% {

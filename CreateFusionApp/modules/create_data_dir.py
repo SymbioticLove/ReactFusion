@@ -5,7 +5,9 @@ import json
 # Function to create a 'data' directory and 'data.json' file within 'src'
 def create_data_dir(project_name):
     data_dir = os.path.join(project_name, "src", "data")
+    comp_dir = os.path.join(project_name, "src", "components")
     os.makedirs(data_dir)
+    os.makedirs(comp_dir)
 
     # Define the JSON data structure to initialize
     data = {

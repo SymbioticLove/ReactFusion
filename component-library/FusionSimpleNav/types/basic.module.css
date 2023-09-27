@@ -20,7 +20,7 @@
   transition: all 0.3s ease;
 }
 
-.active {
+.simpleNavContainer a.active {
   text-decoration: underline;
 }
 
